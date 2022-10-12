@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .box {
+        margin: 20px 0 0;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 24px;
+        padding: 5px 30px;
+        border: 4px solid dodgerblue;
+        box-shadow: 0 0 0 1px black;
+        border-radius: 5px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+
+<div class="box">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+</div>
+
+<script>
+    $('button').click(buttonClick);
+
+    function buttonClick() {
+        $('.box').append($('button').first());
+    }
+</script>
+</body>
+</html>
